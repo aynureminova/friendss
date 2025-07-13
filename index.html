@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Milana üçün Sürpriz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flower-bg">
+        <div class="password-container">
+            <h2>🌸 Milanam üçün Sürprizzz 🌸</h2>
+            <p>Parolu daxil et canım:</p>
+            <input type="password" id="password" placeholder="Parol">
+            <button onclick="checkPassword()">Daxil ol</button>
+            <p id="error" class="error"></p>
+        </div>
+
+        <div class="hidden-content" style="display:none;">
+            <!-- Mərhələlər -->
+            <div id="stage1" class="stage">
+  <h2>First Step 🌷</h2>
+  <p>Sürpriiizzz😝
+  <br>Birthday girl Milanam canım gözüm.</br><br>Bu gün sənlə sürpiz dolu bir yolculuğa çıxacayıq.Çox həyəcanlıyammm.</br>
+  <br>HAZIRSANMII???? Elə isə GO KYLİE💃💃🏻</br></p>
+   <div class="stage1-content">
+                  <img src="photo1.jpg" alt="Şəkil 1" class="stage1-image" />
+
+                </div>
+  <button onclick="nextStage(1)">Go Kylie ➡️</button>
+
+</div>
+
+
+            <div id="stage2" class="stage" style="display:none;">
+                <h2>Love Page 🌼</h2>
+                <p>Ən favori şəkillərimizdən sadəcə bir neçəsi...❤️<br>Şəkillərdəki gözlərimin parıltısından səni necə sevdiyimi anlamaq elə də çətin deyil canım,aşk dolu daha çox və sığdıra bilməyəcəyim şəkillərimizin, anılarımızın olduğu anlarımız olsun həyatımm💞</br>
+</p>
+                  <img src="photo22.jpg" alt="Şəkil 22" style="display: block; margin: 0 auto; border-radius: 10px;width: 400px; max-width: 100%; height: auto;">
+
+                <button onclick="prevStage(2)">⬅️ Geri dön</button>
+                <button onclick="nextStage(2)">Go Kylie ➡️</button>
+<canvas id="emoji-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events:none; z-index:9999;"></canvas>
+
+            </div>
+
+            <div id="stage3" class="stage" style="display:none;">
+                <h2>Memory Page 🌸</h2>
+                
+              <div class="video-container">
+  <video controls autoplay muted loop style="border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 300px; width: 90%;">
+    <source src="vide2.mp4" type="video/mp4">
+    Sizin brauzer video dəstəkləmir.
+  </video>
+
+  <!-- Videonun sağında başqa məzmun ola bilər, yoxdursa buranı sil -->
+  <div class="video-text2">
+    <p>Niyə bilmirəm amma bu bir neçə saniyəlik video gözümdə çox anı canlandırır.Həqiqətən yaxşı və ya pis sənlə bu qədər şeyi paylaşmaq,qısa müddətdə bu qədər yaxın olmaq,birini bu qədər doğma hiss etmək o qədər bambaşqa və xoş duyğuduki bunu anlamaq üçün hiss etmək lazımdı.O şəkillərdəki gülərkən dondurulmuş anlar paylaşılmış duyğular..🤍hamısı sənlə yaşadığım həəər anın və özəlliklə sənin yerin məndə başqadı Mimişam.Çox düşündüm səni necə içdən sevindirə bilərəm və necə bir sürpriz hazırlaya bilərəm deyə,infosec qızları olaraq biraz da ixtisasın biliklərini qatıb sənə belə unudulmaz sürpriz hazırlamaq istədim.Mən özüm çoox əylənərək və sevərək hazırladım bunu və ilk dəfədi belə bir şey edirdim,ümdvaram hal -hazırda səndə bunları bayıla-bayıla oxuyursan və bunu sevdinsə mənim içimdəki mutluluk səninkindən də çox olar çünki həqiqətən özəl olsun istəyirdim.Uşaqlıqda padruşkalarıma məktubla təbrik yazardım,o vaxt səni tanımırdım.Böyüdüm və yenə məktub yazıram ama bu dəfə çox fərqli şəkildə və səni tanıyaraq yazıram bu məktubu.Səni həqiqətən çooox isdiyirəm Milana,sənə bol bol sürprizlər edəcəyim daha uzun birlikdəliklərimiz olsun abırsız bacım.Sözü çox uzatmıram növbəti hissələrdə daha maraqlı mərhələlər var,yanağına burdan bir öpücük💋 qonduraraq davam edəkkkk temalar var qabaqda😁
+</p>
+  </div>
+</div>
+
+
+                <button onclick="prevStage(3)">⬅️ Geri dön</button>
+                <button onclick="nextStage(3)">Go Kylie ➡️</button>
+            </div>
+
+           <div id="stage4" class="stage" style="display:none;">
+    <span class="corner-emoji">💋</span>
+    <h2>Şərəfsizlik Page 🤗</h2>
+
+    <div class="photo-text">
+        <img src="photo2.jpg" alt="Şəkil 4">
+        <div class="paragraph-box">
+        <p>
+            Bura heçnə yazmayacam amma sən şəkillərə baxanda onların səsini eşidəcəksən.
+            Hətta bəzi şəkillərə baxıb içindən "şərəfsizzzz" deyə keçirə bilərsən 
+            amma canım napim huyum kurusun sənə burda belə sataşıram.
+            Zarafat bir yana nə günlər idiye hazırladıqca film kimi gözümün önünden keçir
+            çox çapkın hiperaktif chill girller olmuşuq ahahaha.
+            Nəysə bacı sənə sataşdığıma görə davam edə bilərik yolumuza.
+            Bundan daha artıq əyləncəli anlarımız olsun.
+            Dərsimizi aldıq artıq təqadümüzü yemək erasıdı diye bilirmiyiz??ahahahah
+            <br><br> Ağlımda o mahnı oxuyure:
+            <br> -----
+            <br> Dönmesek de köşeyi biz
+            <br> Kaybetmeyiz neşeyi biz
+            <br> Hani yok mu bi' şeyimiz?
+            <br> Takma, düzelir be kanka
+            <br> -----
+            <br> Bu âlemde gardaşın çok
+            <br> Denizde kum bizde dalga
+            <br> Hallederiz sıkıntı yok
+            <br> Takma, düzelir be kanka
+           
+        </p>
+         <audio controls>
+            <source src="sarki.mp3" type="audio/mpeg">
+            Sənin brauzerin bu mp3 formatını dəstəkləmir.
+        </audio>
+    </div>
+    </div>
+
+    <button onclick="prevStage(4)">⬅️ Geri dön</button>
+    <button onclick="nextStage(4)">Go Kylie ➡️</button>
+</div>
+
+
+            <div id="stage5" class="stage" style="display:none;">
+                <h2>Sürpriz Yumurta Page 💕</h2>
+                <p><h3>Milana Edition</h3></p>
+                 <div class="video-container">
+  <video controls autoplay muted loop style="border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 300px; width: 90%;">
+    <source src="video5.mp4" type="video/mp4">
+    Sizin brauzer video dəstəkləmir.
+  </video>
+
+  <!-- Videonun sağında başqa məzmun ola bilər, yoxdursa buranı sil -->
+  <div class="video-text">
+    <p>Bir zamanlar bir yumurta vardı… içində əfsanə yatırdı!</br>Həmin tarixi an!</br>Sürpriz yumurta çatladı.
+<br>Həyatımıza xoş gəldin sarı civcivim🤗</br><span style="font-size: 40px;">💛</span></p>
+  </div>
+</div>
+                <button onclick="prevStage(5)">⬅️ Geri dön</button>
+                <button onclick="nextStage(5)">Go Kylie ➡️</button>
+            </div>
+
+
+         
+
+            <div id="stage6" class="stage" style="display:none;">
+                <h2>Slay Congrats Page ✨</h2>
+                <p>İYİKİİİİ SEN SLAY QUEEN💋❤️💃🏻</p>
+                <div class="video-container" style="text-align: center;">
+  <video controls autoplay muted loop style="border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 300px; width: 90%;">
+    <source src="video333.mp4" type="video/mp4">
+    Sizin brauzer video dəstəkləmir.
+  </video>
+</div>
+
+
+
+                <button onclick="prevStage(6)">⬅️ Geri dön</button>
+                <button onclick="nextStage(6)">Go Kylie ➡️</button>
+            </div>
+
+           <div id="stage7" class="stage" style="display:none;">
+    <h2>🎉 Son Mərhələ 🎉</h2>
+    <p>Və gəldik bu tatlı anlarımızın və sürprizimizin sonunaaaa,umarım çox bəyəndin bu sürprizimi çünki bəyənməmək kimi seçeneyin yok eheheee😝
+</p>
+
+    <div class="stage1-content2">
+        <p>AD GÜNÜN ÇOOOOOX MÜBARƏƏKKKKKK BAAAALIIIMMM✨💗💖💘💝 <br> Ürəyindən keçən,manifestlədiyin həəər şeyi 20 yaşın sənə gətirsin.Hər zaman bol bol xoşbəxtliklə,sağlıqla,uğurla,sevgi dolu,şanslı yaşayasan balammm.Yaxşıki varımsan yaxşıki bu gün o yumurtadan çıxdın da sonra mənim həyatıma girdin🤭💗Digər səhifələrdə qeyd etdiyim kimi boool boool birlikdə keçirəcəyimiz yaşlarımız olsun,səni çooox isdiyirəm ürəyimin parası.Sən mənim dostum deyilsən,anılarımsan,uşaqlığımsan,canımın içisən.Həyatdakı ən gözəl ən'ləri sənə arzulayıram.<br>20 YAŞ YUBİLEYİN MÜBARƏKKKKK GÖZAL BACIM,AĞBİRÇƏK BACIM😝🤍</br></br></p>
+
+        <div class="box" onclick="openModal()">
+            <div class="lid">🎀</div>
+            <div class="content">
+                Noldu elə bilirsən burda hədiyyə var?😁<br />
+                Yox canım,hədiyyəni sabah özüm verəcəm həyəcanı qalsında aaa🙂‍↔️<br />
+              
+            </div>
+            Bu sürpriz qutunun içində nə var?
+<br>(click box)!</br>
+        </div>
+    </div>
+
+    <button onclick="prevStage(7)">⬅️ Geri dön</button>
+</div>
+
+        </div>
+    </div>
+
+ <div id="modal" class="modal">
+
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Noldu elə bilirsən burda hədiyyə var?😁<br />Yox canım,hədiyyəni sabah özüm verəcəm həyəcanı qalsında aaa🙂‍↔️</p>
+      </div>
+    </div>
+
+
+    <script>
+        function checkPassword() {
+  const correctPassword = "lunaria";
+  const password = document.getElementById('password').value;
+  if(password === correctPassword){
+      document.querySelector('.password-container').style.display = 'none';
+      document.querySelector('.hidden-content').style.display = 'block';
+      fireConfetti(); // Parol doğru olduqda konfeti partlasın
+  } else {
+      document.getElementById('error').innerText = "Parol səhvdir canım, bir daha yoxla.";
+  }
+}
+
+
+        function nextStage(currentStage){
+            document.getElementById('stage' + currentStage).style.display = 'none';
+            const next = currentStage + 1;
+            const nextStage = document.getElementById('stage' + next);
+            if(nextStage){
+                nextStage.style.display = 'block';
+            }
+        }
+
+        function prevStage(currentStage){
+            document.getElementById('stage' + currentStage).style.display = 'none';
+            const prev = currentStage - 1;
+            if(prev > 0){
+                document.getElementById('stage' + prev).style.display = 'block';
+            }
+        }
+
+// Modal funksiyaları
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+             document.getElementById('modal').style.display = 'none';}
+
+const canvas = document.getElementById('emoji-canvas');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+class EmojiParticle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.speedY = Math.random() * 1 + 0.5;
+    this.size = Math.random() * 20 + 20; // emoji ölçüsü
+    this.emoji = Math.random() < 0.5 ? '✨' : '❤️'; // istədiyin emojiləri buraya əlavə edə bilərsən
+    this.alpha = Math.random() * 0.8 + 0.2;
+  }
+
+  update() {
+    this.y -= this.speedY;
+    if (this.y < -this.size) {
+      this.y = canvas.height + this.size;
+      this.x = Math.random() * canvas.width;
+    }
+  }
+
+  draw() {
+    ctx.save();
+    ctx.globalAlpha = this.alpha;
+    ctx.font = `${this.size}px serif`; // serif şrifti daha elegant olur
+    ctx.fillText(this.emoji, this.x, this.y);
+    ctx.restore();
+  }
+}
+
+const emojis = [];
+for (let i = 0; i < 50; i++) {
+  emojis.push(new EmojiParticle());
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  emojis.forEach(e => {
+    e.update();
+    e.draw();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+
+function fireConfetti() {
+  confetti({
+    particleCount: 200,  // Konfet sayı
+    spread: 100,         // Yayılma dərəcəsi
+    origin: { y: 0.6 }   // Başlama nöqtəsi (y-oxunda)
+  });
+}
+
+//////////////////////////////////////////////////////////////
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>

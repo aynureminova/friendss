@@ -1,0 +1,288 @@
+ body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fffaf0;
+            color: #444;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .flower-bg {
+            background-image: url('https://i.pinimg.com/originals/ea/8b/13/ea8b13bc361aaf8ec43fceade67a41d8.jpg');
+            background-size: cover;
+            padding: 50px 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .password-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .hidden-content img {
+            width: 70%;
+            max-width: 350px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            background-color: #ff69b4;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .stage {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 15px;
+            margin: 30px auto;
+            width: 85%;
+            max-width: 750px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+        }
+
+        /* --- Yeni əlavə: 1-ci mərhələ üçün yan-yana şəkil və qutu --- */
+        .stage1-content {
+            display: flex;
+            font-size: 17px;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .stage1-image {
+            width: 40%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Qutu dizaynı */
+        .box {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(145deg, #e6b802, #e6b802);
+            border-radius: 20px;
+            position: relative;
+            cursor: pointer;
+            box-shadow:
+                5px 5px 15px #a50000,
+                -5px -5px 15px #fbfbfb;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .box:hover {
+            box-shadow:
+                7px 7px 20px #a50000,
+                -7px -7px 20px #fbfbfb;
+            transform: translateY(-5px);
+        }
+
+        .lid {
+            width: 150px;
+            height: 50px;
+            background: linear-gradient(135deg, #f0edd7, #f0edd7);
+            border-radius: 20px 20px 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: top center;
+            transition: transform 0.5s ease;
+            box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.3);
+            font-size: 38px; /* Emojinin böyüklüyü */
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.5s ease;
+            user-select: none;
+        }
+
+        .box.open .lid {
+            transform: rotateX(150deg);
+        }
+
+        .box.open .content {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* --- Modal pəncərə dizaynı --- */
+        .modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            max-width: 350px;
+           font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #star-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* kliklər canvas-dan keçsin */
+  z-index: 9999; /* ən üstdə olsun */
+}
+.video-container {
+  display: flex;
+  align-items: flex-start; /* Üst tərəfdən hizala */
+    justify-content: center; /* ortala */
+
+  gap: 20px; /* Video ilə mətn arasına məsafə */
+}
+.video-text {
+  height: 350px; /* max-height yox, height qoy */
+  padding: 0 10px;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Yatay mərkəz */
+  text-align: center;
+}
+
+.video-text2 {
+      margin-top: 90px; 
+  height: 350px; /* max-height yox, height qoy */
+  padding: 0 10px;
+  line-height: 1.6;
+  font-size: 15px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Yatay mərkəz */
+  
+}
+
+video {
+  float: left;
+  max-width: 350px;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-right: 20px; /* Yanında boşluq */
+  display: block;
+}
+.stage {
+  position: relative; /* Emoji-nin yerləşməsi üçün vacibdir */
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 50px;
+  border-radius: 15px;
+  margin: 30px auto;
+  width: 85%;
+  max-width: 750px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+}
+
+.corner-emoji {
+  position: absolute;
+  top: 10px; /* Yuxarıdan məsafə */
+  right: 10px; /* Sağdan məsafə */
+  font-size: 35px; /* Emoji ölçüsü */
+}
+
+.photo-text {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Aralıq boşluğu */
+}
+
+.photo-text img {
+    width: 400px; /* İstəyə uyğun ölçü */
+    border-radius: 10px;
+}
+
+.photo-text p {
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.paragraph-box {
+    max-height: 350px; /* Paragrafın hündürlüyünü tənzimləyir */
+    overflow-y: auto;  /* Scroll olsun, amma çox yuxarı olmasın */
+    padding-right: 10px;
+    line-height: 1.6;
+    font-size: 15px;
+    text-align: left;
+}
+
+.stage1-content2 {
+            display: flex;
+            font-size:18px ;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
